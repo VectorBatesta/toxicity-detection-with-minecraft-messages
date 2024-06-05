@@ -2,12 +2,12 @@ from copy import *
 
 
 class tipoArquivo:
-    def __init__(self, nomeArquivo, separadores, quantCanonics):
+    def __init__(self, nomeArquivo, separadores, quantHeader):
         self.arq = open(nomeArquivo, "r", encoding = "utf8")
         self.separadores = separadores
 
-        self.canonics = []
-        self.getsetCanonics(quantCanonics)
+        self.header = []
+        self.getsetHeader(quantHeader)
 
 
 
@@ -28,10 +28,10 @@ class tipoArquivo:
 
 
 
-    def getsetCanonics(self, quant):
-        for i in range(quant):
+    def getsetHeader(self, quant):
+        for _ in range(quant):
             tok = self.getToken()
-            self.canonics.append(tok)
+            self.header.append(tok)
         
         return
 

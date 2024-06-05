@@ -8,9 +8,9 @@ if __name__ == "__main__":
     profanity = tipoArquivo(
         nomeArquivo = "profanity_en.csv",
         separadores = [',', '\n', ' '],
-        quantCanonics = 9
+        quantHeader = 9
     )
-    print(profanity.canonics)
+    print(profanity.header)
     
 
     #lista_profanidade = tokenizer(fil)
