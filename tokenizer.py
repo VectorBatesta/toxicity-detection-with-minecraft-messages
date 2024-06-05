@@ -1,12 +1,41 @@
 from copy import *
 
-class tipoArquivo:
-    def __init__(self, nomeArquivo):
-        self.arq = open(nomeArquivo, "r")
-        self.pointer = 0
 
-    def getLetra(self):
-        return self.arq
+class tipoArquivo:
+    def __init__(self, nomeArquivo, separadores, quantCanonics):
+        self.arq = open(nomeArquivo, "r", encoding = "utf8")
+        self.separadores = separadores
+
+        self.canonics = []
+        self.getsetCanonics(quantCanonics)
+
+
+
+    def getLetra(self, quant = 1):
+        return self.arq.read(quant)
+    
+
+
+    def getToken(self):
+        tok = ""
+        letra = self.getLetra()
+        
+        while letra not in self.separadores:
+            tok = tok + letra
+            letra = self.getLetra()
+
+        return tok
+
+
+
+    def getsetCanonics(self, quant):
+        for i in range(quant):
+            tok = self.getToken()
+            self.canonics.append(tok)
+        
+        return
+
+
 
 
 class tipoToken:

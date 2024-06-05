@@ -5,8 +5,12 @@ from tokenizer import *
 
 
 if __name__ == "__main__":
-    profanity = tipoArquivo("profanity_en.csv")
-    print(profanity.pointer)
+    profanity = tipoArquivo(
+        nomeArquivo = "profanity_en.csv",
+        separadores = [',', '\n', ' '],
+        quantCanonics = 9
+    )
+    print(profanity.canonics)
     
 
     #lista_profanidade = tokenizer(fil)
