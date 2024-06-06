@@ -2,12 +2,9 @@ from copy import *
 
 
 class tipoArquivo:
-    def __init__(self, nomeArquivo, separadores, quantHeader):
+    def __init__(self, nomeArquivo, separadores):
         self.arq = open(nomeArquivo, "r", encoding = "utf8")
         self.separadores = separadores
-
-        self.header = []
-        self.getsetHeader(quantHeader)
 
 
 
@@ -28,26 +25,29 @@ class tipoArquivo:
 
 
 
+    
+
+
+####################################3
+
+
+
+
+class profanityArquivo(tipoArquivo):
+    def __init__(self, nomeArquivo, separadores, quantHeader):
+        super().__init__(nomeArquivo, separadores)
+        
+        self.header = []
+        self.getsetHeader(quantHeader)
+        
+        
+
     def getsetHeader(self, quant):
         for _ in range(quant):
             tok = self.getToken()
             self.header.append(tok)
         
         return
-
-
-
-
-class tipoToken:
-    def __init__(self):
-        pass
-
-
-class listaTokens:
-    def __init__(self, arq: tipoArquivo, ordemCanonica, splitter):
-        self.lista = []
-        self.ordemCanonica = ordemCanonica
-        self.splitter = splitter
         
 
     

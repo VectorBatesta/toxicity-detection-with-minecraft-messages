@@ -5,7 +5,7 @@ from tokenizer import *
 
 
 if __name__ == "__main__":
-    profanity = tipoArquivo(
+    profanity = profanityArquivo(
         nomeArquivo = "profanity_en.csv",
         separadores = [',', '\n', ' '],
         quantHeader = 9
