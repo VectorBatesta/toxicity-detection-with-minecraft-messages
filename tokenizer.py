@@ -34,6 +34,18 @@ class tipoArquivo:
 
 
 class profanityArquivo(tipoArquivo):
+    # nomeArquivo: str
+    # separadores: list
+
+    # quantHeader: int
+    # header: list
+    
+    # toxicWords_amount: int
+    # toxicWordLIST: list
+
+
+
+
     def __init__(self, nomeArquivo, separadores, quantHeader, toxicWords_amount):
         super().__init__(nomeArquivo, separadores)
 

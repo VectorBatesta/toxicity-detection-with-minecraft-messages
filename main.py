@@ -1,20 +1,7 @@
 #from kaggle import *
 from tokenizer import *
 import json
-
-"""
-[
-    {
-        "username": "Cpl_iPatch",
-        "content": "everyone come to 700 50k its my base",
-        "date": "09/02/2020 2:14 AM"
-    },
-    {
-"""
-
-[TODO: json]
-
-muito complicado \/
+import csv
 
 # def cleanDataset():
 #     arq = open("clean.json", "r", encoding = "utf8")
@@ -48,11 +35,27 @@ muito complicado \/
 
 
 
+"""
+[
+    {
+        "username": "Cpl_iPatch",
+        "content": "everyone come to 700 50k its my base",
+        "date": "09/02/2020 2:14 AM"
+    },
+    {
+        "username": "EpikJasper",
+        "content": "cap",
+        "date": "09/02/2020 2:14 AM"
+    },
+    {
+"""
+
+
+    
+
+
+
 if __name__ == "__main__":
-    cleanDataset()
-
-
-if __name__ == "__amain__":
     profanity = profanityArquivo(
         nomeArquivo = "profanity_en.csv",
         separadores = [',', '\n'], #so separar tokens por virgula por causa do CSV
@@ -61,8 +64,36 @@ if __name__ == "__amain__":
     ) 
     print(profanity.header)
 
-    print(profanity.toxicWordLIST[0])
+    #print(profanity.toxicWordLIST[0])
+
+
+
+
+
+
+
+
+    arq = open("clean.json", "r", encoding = "utf8")
+
+    texto = arq.read()
+    texto_json = json.loads(texto)
+
+    # for i in len(texto_json):
+    #     print( texto_json[i]['username'] + ',' )
+    #     print( texto_json[i]['content'] )
     
     
 
-    #lista_profanidade = tokenizer(fil)
+
+
+
+    # achado internet
+    with open("profanity_en.csv", "r", encoding = "utf8") as file:
+        csv_reader = csv.DictReader(file)
+
+        print(dict(csv_reader))
+
+
+        # for termo in csv_reader:
+        #     print(termo['text'], termo['severity_rating'])
+
