@@ -91,7 +91,7 @@ if __name__ == "__main__":
     with open("profanity_en.csv", "r", encoding = "utf8") as file:
         csv_reader = csv.DictReader(file)
 
-        print(dict(csv_reader))
+        print(list(csv_reader))
 
 
         # for termo in csv_reader:
