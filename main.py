@@ -2,37 +2,7 @@
 from tokenizer import *
 import json
 import csv
-
-# def cleanDataset():
-#     arq = open("clean.json", "r", encoding = "utf8")
-#     clean = open("clean.txt", "w+", encoding = "utf8")
-    
-#     while True:
-#         txt = arq.read(1)
-
-#         if txt == '': #eof em python eh emptytext
-#             break
-
-#         while txt != "\"": #acha o primeiro "username"
-#             txt = arq.read(1)
-        
-#         arq.read(13) #'"username": "' tem 13 char
-
-#         txt = '' #reseta
-#         letra = ''
-#         while letra != '\"': #le ate acabar nickname
-#             letra = arq.read(1)
-#             txt.append(letra)
-            
-#         clean.write(txt) #escreve nome
-#         clean.write('@') #nao tem @ no arquivo, usar como separador
-
-#         arq.read(24) #24 chars ate texto do usuario
-
-
-        
-
-
+import numpy as np # type: ignore
 
 
 """
@@ -51,49 +21,57 @@ import csv
 """
 
 
-    
-
-
-
 if __name__ == "__main__":
-    profanity = profanityArquivo(
-        nomeArquivo = "profanity_en.csv",
-        separadores = [',', '\n'], #so separar tokens por virgula por causa do CSV
-        quantHeader = 9, #quantidade de tokens no header
-        toxicWords_amount = 1597 #1598 linhas em profanity tirando o header
-    ) 
-    print(profanity.header)
+    
+    arq_mensagens = open("clean.json", "r", encoding = "utf8")
 
-    #print(profanity.toxicWordLIST[0])
+    mensagenstxt = arq_mensagens.read()
+    mensagens_json = json.loads(mensagenstxt)
 
-
-
-
-
-
-
-
-    arq = open("clean.json", "r", encoding = "utf8")
-
-    texto = arq.read()
-    texto_json = json.loads(texto)
-
-    # for i in len(texto_json):
-    #     print( texto_json[i]['username'] + ',' )
-    #     print( texto_json[i]['content'] )
+    # for msg in mensagens_json:
+    #     print(msg['username'], '@', msg['content'])
     
     
-
-
 
 
     # achado internet
-    with open("profanity_en.csv", "r", encoding = "utf8") as file:
-        csv_reader = csv.DictReader(file)
+    arq_profanity = open("profanity_en.csv", "r", encoding = "utf8")
+    profanity_dicts = csv.DictReader(arq_profanity)
 
-        print(list(csv_reader))
+    for termo in profanity_dicts:
+        termo['severity_rating'] = float(termo['severity_rating'])
 
 
-        # for termo in csv_reader:
-        #     print(termo['text'], termo['severity_rating'])
+    # print(list(profanity_dicts))
+    # for termo in profanity_dicts:
+    #     print(termo['text'], '@', termo['severity_rating'])
 
+
+    for msg in mensagens_json[0:100000]:
+        msg['tokens'] = msg['content'].split(" ")
+        msg['toxicity'] = 0
+
+        #print(msg['tokens'])
+
+        for tok in msg['tokens']:
+            for termo in profanity_dicts:
+                if tok == termo['canonical_form_1']:
+                    msg['toxicity'] += termo['severity_rating']
+                    print(msg['toxicity'])
+
+
+    for msg in mensagens_json[0:100000]:
+        if msg['toxicity'] > 0:
+            print('message by', msg['username'], 'has', msg['toxicity'], 'toxicity.')
+
+    
+
+    
+
+
+    # para cada mensagem
+    #     tokeniza a mensagem vira um vetor de tokens
+    #     tokens estao contidos no dict profanidade
+    #         vetor de true/false com 1400 valores
+    #     filtra só os True
+    #     verifica o maior valor entre mild strong severe
