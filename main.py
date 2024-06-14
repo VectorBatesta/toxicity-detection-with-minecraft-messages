@@ -39,7 +39,7 @@ if __name__ == "__main__":
     profanity_dicts = csv.DictReader(arq_profanity)
     profanity_list = list(profanity_dicts)
 
-    for termo in profanity_dicts:
+    for termo in profanity_list:
         termo['severity_rating'] = float(termo['severity_rating'])
 
 
