@@ -38,8 +38,8 @@ if __name__ == "__main__":
     profanity_dicts = csv.DictReader(arq_profanity)
     profanity_list = list(profanity_dicts)
 
-    for termo in profanity_list:
-        termo['severity_rating'] = float(termo['severity_rating'])
+    for termo_profanity in profanity_list:
+        termo_profanity['severity_rating'] = float(termo_profanity['severity_rating'])
 
 
     # print(list(profanity_dicts))
@@ -60,24 +60,37 @@ if __name__ == "__main__":
 
 
 
-
-    for index, msg in enumerate(mensagens_json[0:100000]):
-        msg['tokens'] = msg['content'].split()
-        msg['toxics'] = []
+    for _index, msg in enumerate(mensagens_json[0:100000]):
+        msg['tokens'] = msg['content'].lower().split(" ")
+        msg['all_toxic_occurrences'] = []
 
         #print(msg['tokens'])
 
+        #itera entre todo token da mensagem
         for tok in msg['tokens']:
-            for termo in profanity_list:
-                if tok == termo['canonical_form_1']:
-                    msg['toxics'].append(termo['severity_rating'], )
+            #itera em cada termo da lista de profanity
+            for termo_profanity in profanity_list:
+                
+                #achou token em um dos profanitys
+                if tok.lower() == termo_profanity['text'].lower():
+                    msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
 
-                    print("found toxic word:", tok, ", with toxicity of", termo['severity_rating'], ", on the message:\n", msg['content'], ", index of:", index)
+                    print("\t[FOUND TOXIC WORD]:", tok, ", with toxicity of", termo_profanity['severity_rating'], ", index of:", _index, ", on the message:\n", msg['content'])
+        #########################
+
+        maiorFatorToxicidade = 0
+        for tuple in msg['all_toxic_occurrences']:
+            if maiorFatorToxicidade < tuple[1]: #[1] = severity_rating
+                maiorTermoToxico = tuple[0]     #[0] = text
+                maiorFatorToxicidade = tuple[1]
+        
+        if maiorFatorToxicidade > 0:
+            msg['toxic_tuple'] = (maiorTermoToxico, maiorFatorToxicidade)
 
 
     for msg in mensagens_json[0:100000]:
-        if msg['toxicity'] > 0:
-            print('message by', msg['username'], 'has', msg['toxicity'], 'toxicity.')
+        if msg['toxic_tuple'] != None:
+            print('message by', msg['username'], 'has', msg['toxic_tuple'][1], 'toxicity, because he said', msg['toxic_tuple'][0])
 
     
 
