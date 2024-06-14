@@ -1,5 +1,4 @@
 #from kaggle import *
-from tokenizer import *
 import json
 import csv
 import numpy as np # type: ignore
@@ -48,17 +47,32 @@ if __name__ == "__main__":
     #     print(termo['text'], '@', termo['severity_rating'])
 
 
-    for msg in mensagens_json[0:100000]:
-        msg['tokens'] = msg['content'].split(" ")
-        msg['toxicity'] = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    for index, msg in enumerate(mensagens_json[0:100000]):
+        msg['tokens'] = msg['content'].split()
+        msg['toxics'] = []
 
         #print(msg['tokens'])
 
         for tok in msg['tokens']:
             for termo in profanity_list:
                 if tok == termo['canonical_form_1']:
-                    msg['toxicity'] += termo['severity_rating']
-                    print(msg['toxicity'])
+                    msg['toxics'].append(termo['severity_rating'], )
+
+                    print("found toxic word:", tok, ", with toxicity of", termo['severity_rating'], ", on the message:\n", msg['content'], ", index of:", index)
 
 
     for msg in mensagens_json[0:100000]:
