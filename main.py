@@ -37,6 +37,7 @@ if __name__ == "__main__":
     # achado internet
     arq_profanity = open("profanity_en.csv", "r", encoding = "utf8")
     profanity_dicts = csv.DictReader(arq_profanity)
+    profanity_list = list(profanity_dicts)
 
     for termo in profanity_dicts:
         termo['severity_rating'] = float(termo['severity_rating'])
@@ -54,7 +55,7 @@ if __name__ == "__main__":
         #print(msg['tokens'])
 
         for tok in msg['tokens']:
-            for termo in profanity_dicts:
+            for termo in profanity_list:
                 if tok == termo['canonical_form_1']:
                     msg['toxicity'] += termo['severity_rating']
                     print(msg['toxicity'])
