@@ -54,13 +54,13 @@ if __name__ == "__main__":
 
 
 
+    quantmensagens = 1000000
 
 
 
 
 
-
-    for _index, msg in enumerate(mensagens_json[0:100000]):
+    for _index, msg in enumerate(mensagens_json[0:quantmensagens]):
         msg['tokens'] = msg['content'].lower().split(" ")
         msg['all_toxic_occurrences'] = []
 
@@ -75,7 +75,9 @@ if __name__ == "__main__":
                 if tok.lower() == termo_profanity['text'].lower():
                     msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
 
-                    print("\t[FOUND TOXIC WORD]:", tok, ", with toxicity of", termo_profanity['severity_rating'], ", index of:", _index, ", on the message:\n", msg['content'])
+                    print("\t[FOUND!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
+                          "\nuser:", msg['username'],
+                          "\nmessage:", msg['content'])
         #########################
 
         maiorFatorToxicidade = 0
@@ -88,9 +90,9 @@ if __name__ == "__main__":
             msg['toxic_tuple'] = (maiorTermoToxico, maiorFatorToxicidade)
 
 
-    for msg in mensagens_json[0:100000]:
+    for msg in mensagens_json[0:quantmensagens]:
         if msg['toxic_tuple'] != None:
-            print('message by', msg['username'], 'has', msg['toxic_tuple'][1], 'toxicity, because he said', msg['toxic_tuple'][0])
+            print('message by', msg['username'], 'has', msg['toxic_tuple'][1], 'toxicity, because he said:\n', msg['toxic_tuple'][0])
 
     
 
