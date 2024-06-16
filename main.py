@@ -3,6 +3,8 @@ import json
 import csv
 import numpy as np # type: ignore
 
+import os
+
 
 """
 [
@@ -51,18 +53,24 @@ if __name__ == "__main__":
 
 
     # quant_total_mensagens = len(mensagens_json)
-    quant_total_mensagens = 100000 #100 mil só pra testar
+    quant_total_mensagens = 10000 #10 mil só pra testar
 
-    quant_treinamento = (quant_total_mensagens/100) * 70  # = 70%
-    quant_teste = (quant_total_mensagens/100) * 30        # = 30%
-
-
+    quant_treinamento = int((quant_total_mensagens/100) * 70)  # = 70%
+    quant_teste = int((quant_total_mensagens/100) * 30)        # = 30%
 
 
 
+
+    # para cada mensagem
+    #     tokeniza a mensagem vira um vetor de tokens
+    #     tokens estao contidos no dict profanidade
+    #         vetor de true/false com 1400 valores <- nao feito
+    #     filtra só os True
+    #     verifica o maior valor entre mild strong severe
     for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
         msg['tokens'] = msg['content'].lower().split(" ")
         msg['all_toxic_occurrences'] = []
+        msg['toxic_tuple'] = (None, 0)    #tupla = (termo toxico, toxicidade)
 
         #print(msg['tokens'])
 
@@ -73,11 +81,11 @@ if __name__ == "__main__":
                 
                 #achou token em um dos profanitys
                 if tok.lower() == termo_profanity['text'].lower():
-                    if msg['all_toxic_occurrences'] == None:
-                        print("\t[FOUND!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
+                    if len(msg['all_toxic_occurrences']) == 0:
+                        print("\t[FOUND!] word:", tok, "\t\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
                               "\nuser:", msg['username'], "message:", msg['content'])
                     else:
-                        print("  [ALSO!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
+                        print("  [ALSO!] word:", tok, "\t\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
                               "\nuser:", msg['username'], "message:", msg['content'])
                     
                     msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
@@ -95,20 +103,28 @@ if __name__ == "__main__":
 
     for msg in mensagens_json[0:quant_treinamento]:
         if msg['toxic_tuple'] != None:
-            print('message by', msg['username'], 'has', msg['toxic_tuple'][1], 'toxicity, because he said:\n', msg['toxic_tuple'][0])
+            print('message by', msg['username'], '\thas', msg['toxic_tuple'][1], 'toxicity, because he said:\t\t', msg['toxic_tuple'][0])
 
-    
+
+
+
+
+
+
+
+
+
+
+    print('\n\naperte enter pra continuar')
+    input()
+    os.system('clear')
+
+
     for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
-        None
         #printar index e quant toxicidade
+        print(_index, ": ", msg['toxic_tuple'][1])
 
 
     
 
 
-    # para cada mensagem
-    #     tokeniza a mensagem vira um vetor de tokens
-    #     tokens estao contidos no dict profanidade
-    #         vetor de true/false com 1400 valores
-    #     filtra só os True
-    #     verifica o maior valor entre mild strong severe
