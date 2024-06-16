@@ -50,17 +50,17 @@ if __name__ == "__main__":
 
 
 
+    # quant_total_mensagens = len(mensagens_json)
+    quant_total_mensagens = 100000 #100 mil só pra testar
+
+    quant_treinamento = (quant_total_mensagens/100) * 70  # = 70%
+    quant_teste = (quant_total_mensagens/100) * 30        # = 30%
 
 
 
 
-    quantmensagens = 1000000
 
-
-
-
-
-    for _index, msg in enumerate(mensagens_json[0:quantmensagens]):
+    for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
         msg['tokens'] = msg['content'].lower().split(" ")
         msg['all_toxic_occurrences'] = []
 
@@ -73,11 +73,14 @@ if __name__ == "__main__":
                 
                 #achou token em um dos profanitys
                 if tok.lower() == termo_profanity['text'].lower():
+                    if msg['all_toxic_occurrences'] == None:
+                        print("\t[FOUND!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
+                              "\nuser:", msg['username'], "message:", msg['content'])
+                    else:
+                        print("  [ALSO!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
+                              "\nuser:", msg['username'], "message:", msg['content'])
+                    
                     msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
-
-                    print("\t[FOUND!] word:", tok, "\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
-                          "\nuser:", msg['username'],
-                          "\nmessage:", msg['content'])
         #########################
 
         maiorFatorToxicidade = 0
@@ -90,11 +93,15 @@ if __name__ == "__main__":
             msg['toxic_tuple'] = (maiorTermoToxico, maiorFatorToxicidade)
 
 
-    for msg in mensagens_json[0:quantmensagens]:
+    for msg in mensagens_json[0:quant_treinamento]:
         if msg['toxic_tuple'] != None:
             print('message by', msg['username'], 'has', msg['toxic_tuple'][1], 'toxicity, because he said:\n', msg['toxic_tuple'][0])
 
     
+    for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
+        None
+        #printar index e quant toxicidade
+
 
     
 
