@@ -5,6 +5,11 @@ import numpy as np # type: ignore
 
 import os
 
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_squared_error, r2_score
+
 
 """
 [
@@ -120,11 +125,54 @@ if __name__ == "__main__":
     os.system('clear')
 
 
-    for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
-        #printar index e quant toxicidade
-        print(_index, ": ", msg['toxic_tuple'][1])
+    # for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
+    #     #printar index e quant toxicidade
+    #     print(_index, ": ", msg['toxic_tuple'][1])
 
 
-    
+    print('\n\naperte enter pra continuar')
+    input()
+    os.system('clear')
 
 
+
+##################################################################################################
+# scikit goes here
+##################################################################################################
+
+    contents = [mensagem['content'] for mensagem in mensagens_json]
+    toxicities = [mensagem['toxic_tuple'][1] for mensagem in mensagens_json]
+
+    # Convert text data to numerical data using TF-IDF vectorization
+    X_train, X_test, y_train, y_test = train_test_split(
+        contents,
+        toxicities,
+        train_size = quant_treinamento,
+        test_size = quant_teste,
+        random_state = 42
+    )
+
+    # Convert text data to numerical data using TF-IDF vectorization
+    vectorizer = TfidfVectorizer(max_features=10000)  # Adjust max_features as needed
+    X_train_tfidf = vectorizer.fit_transform(X_train)
+    X_test_tfidf = vectorizer.transform(X_test)
+
+    # Train a regression model
+    model = Ridge()  # You can try other regression models as well
+    model.fit(X_train_tfidf, y_train)
+
+    # Make predictions on the test set
+    y_pred = model.predict(X_test_tfidf)
+
+    # Evaluate the model
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
+
+    print(f"Mean Squared Error: {mse}")
+    print(f"R^2 Score: {r2}")
+
+    # Example: Predicting the toxicity of new messages
+    new_messages = ["Example message 1", "Example message 2"]
+    new_messages_tfidf = vectorizer.transform(new_messages)
+    predicted_toxicities = model.predict(new_messages_tfidf)
+    print(predicted_toxicities)
