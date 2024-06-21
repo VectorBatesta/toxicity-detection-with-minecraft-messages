@@ -140,35 +140,32 @@ if __name__ == "__main__":
 ##################################################################################################
 
     contents = [mensagem['content'] for mensagem in mensagens_json]
-    toxicities = [mensagem['toxic_tuple'][1] if 'toxic_tuple' in mensagem and mensagem['toxic_tuple'] is not None else 0 for mensagem in mensagens_json]
+    toxicities = [mensagem['toxic_tuple'][1] if 'toxic_tuple' in mensagem and mensagem['toxic_tuple'] is not None else 0 for mensagem in mensagens_json] #chat gebitoca
 
     # Convert text data to numerical data using TF-IDF vectorization
     X_train, X_test, y_train, y_test = train_test_split(
         contents,
         toxicities,
-        train_size = quant_treinamento,
-        test_size = quant_teste,
+        train_size = quant_treinamento, #70%
+        test_size = quant_teste, #30%
         random_state = 42
     )
 
     # Convert text data to numerical data using TF-IDF vectorization
-    vectorizer = TfidfVectorizer(max_features=10000)  # Adjust max_features as needed
+    vectorizer = TfidfVectorizer(max_features = 10000)
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
 
     # Train a regression model
-    model = Ridge()  # You can try other regression models as well
+    model = Ridge()  #ridge utilizado
     model.fit(X_train_tfidf, y_train)
 
     # Make predictions on the test set
     y_pred = model.predict(X_test_tfidf)
 
     # Evaluate the model
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-
-    print(f"Mean Squared Error: {mse}")
-    print(f"R^2 Score: {r2}")
+    print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred)}")
+    print(f"R^2 Score: {r2_score(y_test, y_pred)}")
 
     # Print all messages and their predicted toxicity values
     for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
@@ -176,7 +173,7 @@ if __name__ == "__main__":
             print(f"Found message: {content}\n └-->True Toxicity: {true_toxicity}\t\tPredicted Toxicity: {predicted_toxicity:.4f}")
 
     # Example: Predicting the toxicity of new messages
-    new_messages = ["Example message 1", "Example message 2"]
-    new_messages_tfidf = vectorizer.transform(new_messages)
-    predicted_toxicities = model.predict(new_messages_tfidf)
-    print(predicted_toxicities)
+    # new_messages = ["Example message 1", "Example message 2"]
+    # new_messages_tfidf = vectorizer.transform(new_messages)
+    # predicted_toxicities = model.predict(new_messages_tfidf)
+    # print(predicted_toxicities)
