@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 
     # quant_total_mensagens = len(mensagens_json)
-    quant_total_mensagens = 10000 #10 mil só pra testar
+    quant_total_mensagens = 1000000 #1 milhao
 
     quant_treinamento = int((quant_total_mensagens/100) * 70)  # = 70%
     quant_teste = int((quant_total_mensagens/100) * 30)        # = 30%
@@ -128,11 +128,10 @@ if __name__ == "__main__":
     # for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
     #     #printar index e quant toxicidade
     #     print(_index, ": ", msg['toxic_tuple'][1])
-
-
-    print('\n\naperte enter pra continuar')
-    input()
-    os.system('clear')
+    #
+    # print('\n\naperte enter pra continuar')
+    # input()
+    # os.system('clear')
 
 
 
@@ -141,7 +140,7 @@ if __name__ == "__main__":
 ##################################################################################################
 
     contents = [mensagem['content'] for mensagem in mensagens_json]
-    toxicities = [mensagem['toxic_tuple'][1] for mensagem in mensagens_json]
+    toxicities = [mensagem['toxic_tuple'][1] if 'toxic_tuple' in mensagem and mensagem['toxic_tuple'] is not None else 0 for mensagem in mensagens_json]
 
     # Convert text data to numerical data using TF-IDF vectorization
     X_train, X_test, y_train, y_test = train_test_split(
@@ -170,6 +169,11 @@ if __name__ == "__main__":
 
     print(f"Mean Squared Error: {mse}")
     print(f"R^2 Score: {r2}")
+
+    # Print all messages and their predicted toxicity values
+    for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
+        if predicted_toxicity > 0.1:
+            print(f"Found message: {content}\n └-->True Toxicity: {true_toxicity}\t\tPredicted Toxicity: {predicted_toxicity:.4f}")
 
     # Example: Predicting the toxicity of new messages
     new_messages = ["Example message 1", "Example message 2"]
