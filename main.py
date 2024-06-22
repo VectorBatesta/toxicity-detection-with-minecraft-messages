@@ -87,13 +87,13 @@ if __name__ == "__main__":
                 #achou token em um dos profanitys
                 if tok.lower() == termo_profanity['text'].lower():
                     if len(msg['all_toxic_occurrences']) == 0:
-                        print("\t[FOUND!] word:", tok, "\t\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
-                              "\nuser:", msg['username'], "message:", msg['content'])
+                        print(f"\t[FOUND!] word: {tok:<20} toxicity rating: {termo_profanity['severity_rating']:<3} index: {_index} \nuser: {msg['username']:<20} message: {msg['content']}")
                     else:
-                        print("  [ALSO!] word:", tok, "\t\ttoxicity rating:", termo_profanity['severity_rating'], "\tindex:", _index,
-                              "\nuser:", msg['username'], "message:", msg['content'])
+                        print(f"  [ALSO!] word: {tok:<20} toxicity rating: {termo_profanity['severity_rating']} index: {_index}\nuser: {msg['username']:<20} message: {msg['content']}")
                     
                     msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
+
+                    print("")
         #########################
 
         maiorFatorToxicidade = 0
@@ -106,9 +106,10 @@ if __name__ == "__main__":
             msg['toxic_tuple'] = (maiorTermoToxico, maiorFatorToxicidade)
 
 
-    for msg in mensagens_json[0:quant_treinamento]:
-        if msg['toxic_tuple'] != None:
-            print('message by', msg['username'], '\thas', msg['toxic_tuple'][1], 'toxicity, because he said:\t\t', msg['toxic_tuple'][0])
+    with open("out_mensagens_toxicas-original.txt", "w+") as arq:
+        for msg in mensagens_json[0:quant_treinamento]:
+            if msg['toxic_tuple'] != None:
+                arq.write(f"message by {msg['username']:<20}\thas {msg['toxic_tuple'][1]} toxicity, because he said:\t\t {msg['toxic_tuple'][0]}\n")
 
 
 
@@ -120,9 +121,9 @@ if __name__ == "__main__":
 
 
 
-    print('\n\naperte enter pra continuar')
-    input()
-    os.system('clear')
+    # print('\n\naperte enter pra continuar')
+    # input()
+    # os.system('clear')
 
 
     # for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
@@ -164,13 +165,14 @@ if __name__ == "__main__":
     y_pred = model.predict(X_test_tfidf)
 
     # Evaluate the model
-    print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred)}")
+    print(f"\nMean Squared Error: {mean_squared_error(y_test, y_pred)}")
     print(f"R^2 Score: {r2_score(y_test, y_pred)}")
 
     # Print all messages and their predicted toxicity values
-    for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
-        if predicted_toxicity > 0.1:
-            print(f"Found message: {content}\n └-->True Toxicity: {true_toxicity}\t\tPredicted Toxicity: {predicted_toxicity:.4f}")
+    with open("out_mensagens_toxicas-ai.txt", "w+") as arq:
+        for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
+            if predicted_toxicity > 0.3:
+                arq.write(f"Found message: {content}\n└--> True Toxicity: {true_toxicity:<4} Predicted Toxicity: {predicted_toxicity:.4f}\n")
 
     # Example: Predicting the toxicity of new messages
     # new_messages = ["Example message 1", "Example message 2"]
