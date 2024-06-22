@@ -1,0 +1,886 @@
+Found message: NO HOMO
+└--> True Toxicity: 2.2  Predicted Toxicity: 1.2431
+Found message: R u fucking stupid.
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.9772
+Found message: and we all doinn same shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.5640
+Found message: ur cock?
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: fine imma fuckin prove u
+└--> True Toxicity: 2.0  Predicted Toxicity: 1.0000
+Found message: fucking
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: omg he said the kkk word
+└--> True Toxicity: 0    Predicted Toxicity: 1.2766
+Found message: oh fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.5590
+Found message: POOP FUCK
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: kkk
+└--> True Toxicity: 1.8  Predicted Toxicity: 0.7847
+Found message: y u tell that aroon shit will kill us
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.6840
+Found message: nether portals are fucking everywhere lol
+└--> True Toxicity: 0    Predicted Toxicity: 0.8800
+Found message: SIMPS!!!!MOTHERFUCKER
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: just dont be an asshole in chat
+└--> True Toxicity: 0    Predicted Toxicity: 0.4200
+Found message: well fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.4627
+Found message: what kind of retard brings their fucking kits with them
+└--> True Toxicity: 0    Predicted Toxicity: 0.7370
+Found message: just stfu
+└--> True Toxicity: 0    Predicted Toxicity: 1.1880
+Found message: oh fuq its my mom a netherite HOE D;
+└--> True Toxicity: 0    Predicted Toxicity: 1.1820
+Found message: FUCKING BARITONE WHAT THE FUCK
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.7700
+Found message: fuck off mate
+└--> True Toxicity: 0    Predicted Toxicity: 0.3058
+Found message: you're fucking stupid
+└--> True Toxicity: 0    Predicted Toxicity: 0.8965
+Found message: niga u gay
+└--> True Toxicity: 2.6  Predicted Toxicity: 1.5160
+Found message: well fuck
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4627
+Found message: JUST FUCK OFF
+└--> True Toxicity: 0    Predicted Toxicity: 0.6961
+Found message: LIKE RLLY BAD SHIT
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: BlacRoseKora SHUT UP HOLY SHIT YOUR SUCH A FUCKING RE TARD LOL
+└--> True Toxicity: 0    Predicted Toxicity: 1.1220
+Found message: CAN ALL OF U FUCKIN LISTEN TO ME???
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.7200
+Found message: shit tools at my base
+└--> True Toxicity: 0    Predicted Toxicity: 0.3240
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: kkk
+└--> True Toxicity: 1.8  Predicted Toxicity: 0.7847
+Found message: i dont give a shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3840
+Found message: stupid motherfucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: I suck at this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6900
+Found message: MOTHER FUCKER
+└--> True Toxicity: 0    Predicted Toxicity: 0.5548
+Found message: why would I lie to you if I did you would kick my ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: you suck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3679
+Found message: fuck off vonea
+└--> True Toxicity: 0    Predicted Toxicity: 0.3658
+Found message: the stinky is an ass club
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: does this fucking zonvie not want a nether star'
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: kkk
+└--> True Toxicity: 1.8  Predicted Toxicity: 0.7847
+Found message: your fucking 11
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: if u don't wanna fuck with me
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: PLAYING THE FUCKIN RACE CARD
+└--> True Toxicity: 2.0  Predicted Toxicity: 1.4600
+Found message: fuckers
+└--> True Toxicity: 0    Predicted Toxicity: 0.3000
+Found message: u guys suck at this
+└--> True Toxicity: 0    Predicted Toxicity: 0.7500
+Found message: It is a stone hoe
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4400
+Found message: im a certified JCG007 mom fucker
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.3080
+Found message: i dont give a shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3840
+Found message: imagine fucking your neighbor's dog
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.4620
+Found message: JUST SHUT THE FUCK UP THEN
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3400
+Found message: no im lebian
+└--> True Toxicity: 0    Predicted Toxicity: 0.3434
+Found message: i am at -69 69 -69
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.5118
+Found message: I just need one goddamn block
+└--> True Toxicity: 0    Predicted Toxicity: 0.5440
+Found message: fuck ypu all
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4700
+Found message: bullshit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.3520
+Found message: programerleo sucks cock
+└--> True Toxicity: 1.4  Predicted Toxicity: 1.0821
+Found message: cuz i dont fuckin have it
+└--> True Toxicity: 0    Predicted Toxicity: 0.6600
+Found message: Ass kicked? How am I supposed to kill you if you keep disconnecting and reconnecting lmao
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.3800
+Found message: so many fucking mooshrooms
+└--> True Toxicity: 2.2  Predicted Toxicity: 1.3420
+Found message: THE NETHER IS A FUCKING MAZE
+└--> True Toxicity: 0    Predicted Toxicity: 0.5500
+Found message: my son was being a pussy as shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.4200
+Found message: faggot
+└--> True Toxicity: 0    Predicted Toxicity: 1.0076
+Found message: shut the fuck up
+└--> True Toxicity: 0    Predicted Toxicity: 0.3257
+Found message: im gonna fucking murder u egg
+└--> True Toxicity: 0    Predicted Toxicity: 1.0780
+Found message: FUC:K
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: see your tits
+└--> True Toxicity: 0    Predicted Toxicity: 0.3600
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: well fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.4627
+Found message: you;re a shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.4920
+Found message: ily no homo
+└--> True Toxicity: 0    Predicted Toxicity: 2.2000
+Found message: kylie fucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: fuc
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: the fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: stone hoe is pog
+└--> True Toxicity: 0    Predicted Toxicity: 0.4600
+Found message: 0 0 u fucking retard
+└--> True Toxicity: 0    Predicted Toxicity: 1.1863
+Found message: cause of the fucking void
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: he sucks pence's ass probably
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.3400
+Found message: i have a fucking spoon what can i do?
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: so i can fuck intel sideways
+└--> True Toxicity: 0    Predicted Toxicity: 0.6600
+Found message: ur mom is a hoe
+└--> True Toxicity: 0    Predicted Toxicity: 0.4200
+Found message: fuck this one is looted
+└--> True Toxicity: 0    Predicted Toxicity: 1.0800
+Found message: WHAT THE FUCK WAS THAT
+└--> True Toxicity: 0    Predicted Toxicity: 0.4400
+Found message: oh shit really!!
+└--> True Toxicity: 0    Predicted Toxicity: 0.6840
+Found message: you get like 1 bow every fucking second lmao
+└--> True Toxicity: 0    Predicted Toxicity: 1.3420
+Found message: we want his shit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.7320
+Found message: fag
+└--> True Toxicity: 0    Predicted Toxicity: 1.4906
+Found message: and that is can u shut the fuck up
+└--> True Toxicity: 0    Predicted Toxicity: 0.6200
+Found message: Thi server i dead as fuck
+└--> True Toxicity: 2.0  Predicted Toxicity: 2.0000
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: no fuck off
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.9839
+Found message: its ok if i find you ill fuck your ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: RETARD
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: by the shit music nol
+└--> True Toxicity: 0    Predicted Toxicity: 0.4320
+Found message: THE FUCK
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: YO IM STUCK SHIT
+└--> True Toxicity: 0    Predicted Toxicity: 0.7530
+Found message: i had to get a new account BECAUSE OF MICROSOFT I FUCKING HATE MICROSOFT
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: diamond hoes*
+└--> True Toxicity: 0    Predicted Toxicity: 0.4277
+Found message: FUCKING HELL DUDE
+└--> True Toxicity: 0    Predicted Toxicity: 1.6940
+Found message: YOU SUCK
+└--> True Toxicity: 0    Predicted Toxicity: 0.3679
+Found message: holy shit thx
+└--> True Toxicity: 0    Predicted Toxicity: 0.7883
+Found message: are you fucking kidding me
+└--> True Toxicity: 0    Predicted Toxicity: 0.4180
+Found message: shut the fuck up
+└--> True Toxicity: 0    Predicted Toxicity: 0.3257
+Found message: Fucking wasp
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: 2b2t.retarted fuckers
+└--> True Toxicity: 0    Predicted Toxicity: 1.5275
+Found message: what the fuck is going on
+└--> True Toxicity: 0    Predicted Toxicity: 1.3000
+Found message: fuck you poop
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: dafuq
+└--> True Toxicity: 0    Predicted Toxicity: 0.6260
+Found message: QueenNici dont get on my ass while im building
+└--> True Toxicity: 0    Predicted Toxicity: 0.3500
+Found message: you suck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3679
+Found message: holy shit thanks :p
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.5929
+Found message: kkk
+└--> True Toxicity: 0    Predicted Toxicity: 0.7847
+Found message: fuck i just lost so much
+└--> True Toxicity: 0    Predicted Toxicity: 0.7000
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: thats fucked up
+└--> True Toxicity: 0    Predicted Toxicity: 1.6050
+Found message: FUCKING RETARD
+└--> True Toxicity: 0    Predicted Toxicity: 1.1863
+Found message: atl sucks cock
+└--> True Toxicity: 1.4  Predicted Toxicity: 1.0821
+Found message: kkk
+└--> True Toxicity: 0    Predicted Toxicity: 0.7847
+Found message: I thought you was a pedo lmafo
+└--> True Toxicity: 0    Predicted Toxicity: 0.3135
+Found message: you ruined 40 hours of work Doyou expect us not to fuckin g care!??!?
+└--> True Toxicity: 2.0  Predicted Toxicity: 1.2400
+Found message: u act like a fucking 13 year old boy would have sex like wtf -Cpl_ipatch
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.9680
+Found message: fvck u
+└--> True Toxicity: 1.8  Predicted Toxicity: 0.9903
+Found message: im so fucking close
+└--> True Toxicity: 0    Predicted Toxicity: 0.5720
+Found message: WELL FUCK
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4627
+Found message: i am not dum ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.8700
+Found message: kkk
+└--> True Toxicity: 0    Predicted Toxicity: 0.7847
+Found message: yo fuckers
+└--> True Toxicity: 2.4  Predicted Toxicity: 1.5275
+Found message: i don't even know what it is but its shit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.4200
+Found message: you literally were being nice to me and said you were gonna gimme shit i went to spawn
+└--> True Toxicity: 0    Predicted Toxicity: 0.6480
+Found message: FUCK DUDE
+└--> True Toxicity: 0    Predicted Toxicity: 0.4600
+Found message: fucking cheaters
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: FUCKING LEAVE I DONT GIVE A SHIT IF YOUR WAITING
+└--> True Toxicity: 0    Predicted Toxicity: 0.6820
+Found message: come to 87 69 889
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: bitvh shut the fuck up
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3257
+Found message: i didnt fucking know
+└--> True Toxicity: 0    Predicted Toxicity: 0.5500
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: i want to make my own fucking base
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.3080
+Found message: we are just having a convo stfu
+└--> True Toxicity: 0    Predicted Toxicity: 0.3960
+Found message: you fucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: i got sheep fucker mats
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: domo ill kick ur ass with bad ping and broken offhand
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: i mean i made another and i got the hoe you took back so nah
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.7400
+Found message: not a netherite hoe
+└--> True Toxicity: 0    Predicted Toxicity: 1.3200
+Found message: well then fuck you chunky
+└--> True Toxicity: 0    Predicted Toxicity: 0.4267
+Found message: fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: i need fucking 34 more levels to add sharp5 to my op sword
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.4620
+Found message: it can go in the cooter but not the ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.8000
+Found message: someone fucking help me
+└--> True Toxicity: 0    Predicted Toxicity: 0.4840
+Found message: i mean u got fucking zombified villagers
+└--> True Toxicity: 0    Predicted Toxicity: 0.6600
+Found message: i am not having this shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.6660
+Found message: its just that spawn is fucked
+└--> True Toxicity: 0    Predicted Toxicity: 0.3240
+Found message: fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: i was just like "fuck it" and went all in
+└--> True Toxicity: 0    Predicted Toxicity: 0.8800
+Found message: fuck this fucking ever
+└--> True Toxicity: 0    Predicted Toxicity: 0.7700
+Found message: no shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3050
+Found message: FUCK YOU I KNOW A BACKDOOR
+└--> True Toxicity: 0    Predicted Toxicity: 0.4000
+Found message: THIS HIGHWAY IS FUCKING WITH ME
+└--> True Toxicity: 0    Predicted Toxicity: 0.4180
+Found message: FUC U
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: ok how the fuck do you get on top of the nether
+└--> True Toxicity: 0    Predicted Toxicity: 0.3050
+Found message: please Fuck im so sad
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: dont fucking lie to me
+└--> True Toxicity: 0    Predicted Toxicity: 0.3960
+Found message: what does kkk meen
+└--> True Toxicity: 0    Predicted Toxicity: 1.2124
+Found message: holy shit no way
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.5160
+Found message: SolarWolf, see that rubbish bin over there? Get your ass in it, or I'll get SiegeVR to whoop your ass.
+└--> True Toxicity: 0    Predicted Toxicity: 0.6300
+Found message: tell my mom to fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.4800
+Found message: ur at spawn dumbass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3500
+Found message: Are you fucking with me right now?
+└--> True Toxicity: 0    Predicted Toxicity: 0.9020
+Found message: oh my fucking god
+└--> True Toxicity: 0    Predicted Toxicity: 0.4973
+Found message: Karp180 is an Archon player. Why is he on here? Fucking factions player.
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: i was like so fucking powerfull
+└--> True Toxicity: 0    Predicted Toxicity: 0.3740
+Found message: we gootta mine that shit -_-
+└--> True Toxicity: 0    Predicted Toxicity: 0.6480
+Found message: are you fucking
+└--> True Toxicity: 0    Predicted Toxicity: 0.8983
+Found message: jx isnt fucking cheep
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: retard
+└--> True Toxicity: 2.8  Predicted Toxicity: 0.6847
+Found message: i forgot shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3600
+Found message: 420 69 420 c u soon ;)
+└--> True Toxicity: 0    Predicted Toxicity: 0.4300
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: PancakePCs, see that rubbish bin over there? Get your ass in it, or I'll get icevolcano1 to whoop your ass.
+└--> True Toxicity: 0    Predicted Toxicity: 0.6700
+Found message: Dude the fuck?
+└--> True Toxicity: 0    Predicted Toxicity: 0.9000
+Found message: shut the fuck up
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3257
+Found message: Can none of you fucking spell?
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: no shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3050
+Found message: the fuck did i do
+└--> True Toxicity: 0    Predicted Toxicity: 0.8200
+Found message: FUCK OFF
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3941
+Found message: what's it like being homo
+└--> True Toxicity: 0    Predicted Toxicity: 1.1220
+Found message: thats gay as fuck eld
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: shit i need to dip for a sec
+└--> True Toxicity: 0    Predicted Toxicity: 0.7080
+Found message: absolutely massive ass dickhead who cant even get a girlfriend
+└--> True Toxicity: 2.0  Predicted Toxicity: 1.0700
+Found message: dafuq
+└--> True Toxicity: 0    Predicted Toxicity: 0.6260
+Found message: you are a fucking idiot slg
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.3740
+Found message: you dumbass
+└--> True Toxicity: 0    Predicted Toxicity: 0.6300
+Found message: oh shit hes mad
+└--> True Toxicity: 0    Predicted Toxicity: 0.3720
+Found message: faggot
+└--> True Toxicity: 0    Predicted Toxicity: 1.0076
+Found message: fucking glicth
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: im not explaining this shit again
+└--> True Toxicity: 0    Predicted Toxicity: 0.4740
+Found message: Coords* fuck
+└--> True Toxicity: 0    Predicted Toxicity: 1.3600
+Found message: god fucking dang it, anyone knows anything about a raid farm near 10k 40k?
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.3960
+Found message: we do cool shit together
+└--> True Toxicity: 0    Predicted Toxicity: 0.4440
+Found message: ily erf no homo
+└--> True Toxicity: 0    Predicted Toxicity: 2.1340
+Found message: not you stfu
+└--> True Toxicity: 0    Predicted Toxicity: 0.3060
+Found message: EMAN FUCKER OFFER
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: the fuck you say to me you little shit
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4483
+Found message: the fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: no shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3050
+Found message: get the fuck away from my house
+└--> True Toxicity: 0    Predicted Toxicity: 0.6400
+Found message: fag
+└--> True Toxicity: 0    Predicted Toxicity: 1.4906
+Found message: fuk u
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: fucking hell
+└--> True Toxicity: 2.2  Predicted Toxicity: 1.6940
+Found message: did he pay
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: to being a pedo? why
+└--> True Toxicity: 0    Predicted Toxicity: 0.3135
+Found message: but who the fuck cares if someone asked
+└--> True Toxicity: 0    Predicted Toxicity: 0.6000
+Found message: fucking nigers
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: MOTHER FUCKER
+└--> True Toxicity: 0    Predicted Toxicity: 0.5548
+Found message: TO FUCKING DEFINE ANTHROOLOGY
+└--> True Toxicity: 0    Predicted Toxicity: 0.3740
+Found message: whats holy shit for smooth
+└--> True Toxicity: 0    Predicted Toxicity: 0.8400
+Found message: RTEO go to 420 69 420
+└--> True Toxicity: 0    Predicted Toxicity: 0.4100
+Found message: ur dumb ass cant even win a game of hide and seek
+└--> True Toxicity: 0    Predicted Toxicity: 0.5600
+Found message: get THE FUCK OUT THEN
+└--> True Toxicity: 0    Predicted Toxicity: 0.4800
+Found message: fuck all of u gay shitters
+└--> True Toxicity: 0    Predicted Toxicity: 0.4500
+Found message: ily no homo
+└--> True Toxicity: 0    Predicted Toxicity: 2.2000
+Found message: r u fucking stupid
+└--> True Toxicity: 0    Predicted Toxicity: 0.9772
+Found message: at spawn dumbass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3640
+Found message: oke I will fuck me
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3400
+Found message: FUC K
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: fuk
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: THE FUCK
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3281
+Found message: stfu noob
+└--> True Toxicity: 0    Predicted Toxicity: 1.0440
+Found message: fuc
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: ask H4LF_End3R I gave him so much shit for free
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.3480
+Found message: anyone got shit i can have my base got griefed
+└--> True Toxicity: 0    Predicted Toxicity: 0.7320
+Found message: mother fucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.5548
+Found message: fucking hell
+└--> True Toxicity: 0    Predicted Toxicity: 1.6940
+Found message: im bouta stab some shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3360
+Found message: ika fucking wake up
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: bulan can i have shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.6360
+Found message: america's gun laws are so fuckin stupid
+└--> True Toxicity: 0    Predicted Toxicity: 1.5600
+Found message: are yall in the fucking end??????
+└--> True Toxicity: 0    Predicted Toxicity: 0.4840
+Found message: THE FUCK
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: cpl stfu
+└--> True Toxicity: 1.8  Predicted Toxicity: 1.0800
+Found message: no im npt
+└--> True Toxicity: 0    Predicted Toxicity: 0.3434
+Found message: also i dont wanna get fuckin viruses
+└--> True Toxicity: 0    Predicted Toxicity: 1.5600
+Found message: NO BUILDING THIS AINT FORTNITE FUCKING PIECE OF SHTI
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.4180
+Found message: shit i almost hit him
+└--> True Toxicity: 0    Predicted Toxicity: 0.4680
+Found message: i will fap and take a shit then i will play
+└--> True Toxicity: 0    Predicted Toxicity: 0.4920
+Found message: YOU CANT SURIVIE A FUCKING JUMP LIKE THAT
+└--> True Toxicity: 0    Predicted Toxicity: 0.7040
+Found message: my hungryu ass boutta die
+└--> True Toxicity: 0    Predicted Toxicity: 0.3100
+Found message: the fuckin frog girl
+└--> True Toxicity: 0    Predicted Toxicity: 0.9800
+Found message: spotedmushrooms is a faggot
+└--> True Toxicity: 0    Predicted Toxicity: 1.0076
+Found message: fun fact! eat my ass
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.6984
+Found message: I will shit on you so hard that you go back to fortnite
+└--> True Toxicity: 0    Predicted Toxicity: 0.3120
+Found message: some1 can randomly walk through and find our sh1t
+└--> True Toxicity: 0    Predicted Toxicity: 0.3600
+Found message: U MOTHER FUCKER
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.5548
+Found message: i fucked up tho
+└--> True Toxicity: 0    Predicted Toxicity: 0.7884
+Found message: because they are fucking idiots
+└--> True Toxicity: 0    Predicted Toxicity: 0.7040
+Found message: fuk
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.6318
+Found message: you mean *fucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: my finger slip
+└--> True Toxicity: 0    Predicted Toxicity: 0.9000
+Found message: shut the fuck up
+└--> True Toxicity: 0    Predicted Toxicity: 0.3257
+Found message: no u stfu
+└--> True Toxicity: 0    Predicted Toxicity: 0.3082
+Found message: tf is this big ass wall
+└--> True Toxicity: 0    Predicted Toxicity: 0.7100
+Found message: can i have a cock
+└--> True Toxicity: 0    Predicted Toxicity: 0.3470
+Found message: i think i am fucked :)
+└--> True Toxicity: 0    Predicted Toxicity: 1.0560
+Found message: but a shitty pc
+└--> True Toxicity: 0    Predicted Toxicity: 0.7100
+Found message: dude I was portal trapped and I had to wait fucking 250 secs to break out with my fist
+└--> True Toxicity: 0    Predicted Toxicity: 0.7480
+Found message: i died to FUCKING PIGLINS
+└--> True Toxicity: 0    Predicted Toxicity: 0.4620
+Found message: retard
+└--> True Toxicity: 2.8  Predicted Toxicity: 0.6847
+Found message: Lither the fuck no
+└--> True Toxicity: 0    Predicted Toxicity: 0.3663
+Found message: allen i died when i had alot of good shit and i am trying to get to -250 200 to fucking do shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.6380
+Found message: Shit for the overworld highway
+└--> True Toxicity: 0    Predicted Toxicity: 0.9600
+Found message: ok? i suck at cords so
+└--> True Toxicity: 0    Predicted Toxicity: 0.6580
+Found message: fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: fuck this server and all of it's admins
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3620
+Found message: ah fuck
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.9173
+Found message: dream holy shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.5160
+Found message: dafuq
+└--> True Toxicity: 0    Predicted Toxicity: 0.6260
+Found message: ur the asshole weeb
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.5160
+Found message: im gonna fuckin die
+└--> True Toxicity: 0    Predicted Toxicity: 0.3800
+Found message: you aculy suck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3679
+Found message: FUC
+└--> True Toxicity: 0    Predicted Toxicity: 0.3661
+Found message: yeah fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.6163
+Found message: people in here suck
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.3800
+Found message: not homo but i support it
+└--> True Toxicity: 2.2  Predicted Toxicity: 1.1220
+Found message: you have a netherite hoe
+└--> True Toxicity: 0    Predicted Toxicity: 1.3200
+Found message: ok you guys suck bye
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: u can have his shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.6240
+Found message: kkk for trump
+└--> True Toxicity: 0    Predicted Toxicity: 1.2784
+Found message: FUCK YOU IDIOT
+└--> True Toxicity: 0    Predicted Toxicity: 0.4180
+Found message: holup, im beatin g the shit outta this sheep
+└--> True Toxicity: 0    Predicted Toxicity: 0.3720
+Found message: this is my shitty house
+└--> True Toxicity: 0    Predicted Toxicity: 0.6700
+Found message: no its mean it s ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.5100
+Found message: oh fuck thank god
+└--> True Toxicity: 0    Predicted Toxicity: 1.2200
+Found message: fucking what?
+└--> True Toxicity: 0    Predicted Toxicity: 0.7480
+Found message: fag
+└--> True Toxicity: 0    Predicted Toxicity: 1.4906
+Found message: its dumb as fuck
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.9800
+Found message: isnt it cold as shit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.6360
+Found message: fuk
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: no fuck you fireecreeper001
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.9564
+Found message: MY CAT WONT LEAGE THE FIRKICKING HOE
+└--> True Toxicity: 0    Predicted Toxicity: 0.6000
+Found message: oh wow ur pretty fucking far lmao
+└--> True Toxicity: 0    Predicted Toxicity: 0.3465
+Found message: yes fuck ghasts as well
+└--> True Toxicity: 0    Predicted Toxicity: 0.4133
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: not playing on this shit anymore
+└--> True Toxicity: 0    Predicted Toxicity: 0.5940
+Found message: close the fucking doors
+└--> True Toxicity: 0    Predicted Toxicity: 0.5940
+Found message: you adopted like stfu your not loved kid
+└--> True Toxicity: 0    Predicted Toxicity: 0.6480
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: why i spawn so fucked up
+└--> True Toxicity: 0    Predicted Toxicity: 1.0260
+Found message: i got the shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.7920
+Found message: you are fucking slow
+└--> True Toxicity: 0    Predicted Toxicity: 0.3300
+Found message: fuck lost my kit
+└--> True Toxicity: 0    Predicted Toxicity: 0.5020
+Found message: why is my internet so ass
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.6200
+Found message: my fucking base and everything
+└--> True Toxicity: 0    Predicted Toxicity: 0.4180
+Found message: with there big ass noses
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.6600
+Found message: AND THIS FUCKING WITHER
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: you suck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3679
+Found message: no im not a dumbass eld
+└--> True Toxicity: 0    Predicted Toxicity: 1.0640
+Found message: im not giving you shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.4860
+Found message: we moved here to check it out fuckin hated it so we're moving back
+└--> True Toxicity: 0    Predicted Toxicity: 1.4400
+Found message: oh my fucking god
+└--> True Toxicity: 0    Predicted Toxicity: 0.4973
+Found message: wait ill just get my shit out
+└--> True Toxicity: 0    Predicted Toxicity: 0.3240
+Found message: to not be toxic or anything ill just say that im from KKK if thats allowed
+└--> True Toxicity: 1.8  Predicted Toxicity: 1.4181
+Found message: what a fucking degenerate
+└--> True Toxicity: 0    Predicted Toxicity: 0.7480
+Found message: bruh so fucking ez
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: im not fucking chinese chase
+└--> True Toxicity: 0    Predicted Toxicity: 0.6600
+Found message: pedo
+└--> True Toxicity: 0    Predicted Toxicity: 0.9959
+Found message: TO WHERE CHUNKY FUCKER LIVES
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: the people suck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3800
+Found message: cuz of the vlade shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.5520
+Found message: Im naked how am i supposed to blow you up you fucking idiot
+└--> True Toxicity: 0    Predicted Toxicity: 0.7150
+Found message: fuck yea i do
+└--> True Toxicity: 0    Predicted Toxicity: 0.7489
+Found message: ricko u suck
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.5900
+Found message: aight gn ilyall no homo
+└--> True Toxicity: 2.2  Predicted Toxicity: 2.1686
+Found message: myabe im no aon alegde
+└--> True Toxicity: 0    Predicted Toxicity: 0.3434
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: FUCK OFF BLICKY
+└--> True Toxicity: 2.0  Predicted Toxicity: 1.3600
+Found message: Fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: fucking take that whore
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.9874
+Found message: u fucking dumbshit
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: theres the kkk
+└--> True Toxicity: 0    Predicted Toxicity: 1.2154
+Found message: DUDE STFU
+└--> True Toxicity: 0    Predicted Toxicity: 0.5651
+Found message: i didnt say "hm?" to you dumbass
+└--> True Toxicity: 0    Predicted Toxicity: 0.6020
+Found message: the fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: ok i dont fuckin care niga
+└--> True Toxicity: 0    Predicted Toxicity: 1.5553
+Found message: ye ricko is gonna beat ur ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: niga
+└--> True Toxicity: 2.6  Predicted Toxicity: 1.3607
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: holy shit wtf
+└--> True Toxicity: 0    Predicted Toxicity: 0.3711
+Found message: ur also a dumb fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3400
+Found message: can I start/join a group with someone? my coords are 1 69 1196
+└--> True Toxicity: 0    Predicted Toxicity: 0.5800
+Found message: IM ON YOUR FUCKING SIDE
+└--> True Toxicity: 0    Predicted Toxicity: 0.6820
+Found message: ShardDawn suck my dick now plaese :( :( :( :(
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.9500
+Found message: you fucking got to be kidding
+└--> True Toxicity: 2.2  Predicted Toxicity: 1.5840
+Found message: pig u no life shut ur fucking mouth
+└--> True Toxicity: 0    Predicted Toxicity: 0.7700
+Found message: no fucking shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.3582
+Found message: FUCK ALL
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.6624
+Found message: were the fuck are u all at
+└--> True Toxicity: 0    Predicted Toxicity: 0.5700
+Found message: pls can someone come to -0 69 474
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.6500
+Found message: coords are 420 69
+└--> True Toxicity: 0    Predicted Toxicity: 0.4100
+Found message: fucks sake
+└--> True Toxicity: 0    Predicted Toxicity: 0.6400
+Found message: dont give him shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.8760
+Found message: we don't give a shit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.7800
+Found message: PEDO!!!!!!!
+└--> True Toxicity: 0    Predicted Toxicity: 0.9959
+Found message: bruhh i was the legit 3rd member of i cant fucking say
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: tracking boobs
+└--> True Toxicity: 0    Predicted Toxicity: 0.4122
+Found message: fuk
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: you type like a fucking kid
+└--> True Toxicity: 0    Predicted Toxicity: 0.6160
+Found message: and 3 secondsseaswe i will mskae a shit
+└--> True Toxicity: 0    Predicted Toxicity: 0.5400
+Found message: 5 fucking ping
+└--> True Toxicity: 0    Predicted Toxicity: 0.6820
+Found message: BRUH I"M SO FUCKING MAD I LOST EVERTHING I HAD EVEN A GOD APPLE
+└--> True Toxicity: 0    Predicted Toxicity: 1.0120
+Found message: ok well dont fuck up the exernal landskape
+└--> True Toxicity: 0    Predicted Toxicity: 0.3600
+Found message: fag
+└--> True Toxicity: 0    Predicted Toxicity: 1.4906
+Found message: tommmy fuck off
+└--> True Toxicity: 0    Predicted Toxicity: 0.3941
+Found message: SPEAR??>??"?"????? THE FUCK DOES THAT MEAN
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4800
+Found message: i want cock
+└--> True Toxicity: 0    Predicted Toxicity: 0.3521
+Found message: papso fuck off or ill kill u
+└--> True Toxicity: 0    Predicted Toxicity: 0.4600
+Found message: tps really fucking with me right now
+└--> True Toxicity: 0    Predicted Toxicity: 0.3740
+Found message: fuck goin on Contagis
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.6200
+Found message: my coords are X550 Y 69 Z292
+└--> True Toxicity: 0    Predicted Toxicity: 0.7758
+Found message: the fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: whats your guyses fucking problems
+└--> True Toxicity: 0    Predicted Toxicity: 0.3520
+Found message: oh fuck u it was the opposite
+└--> True Toxicity: 0    Predicted Toxicity: 0.5000
+Found message: i didnt ask for your ping either dumbass
+└--> True Toxicity: 1.4  Predicted Toxicity: 0.3780
+Found message: SHUT THE FUCK UP
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.3257
+Found message: shut the fuck up
+└--> True Toxicity: 0    Predicted Toxicity: 0.3257
+Found message: when ma mic fucking arrive
+└--> True Toxicity: 0    Predicted Toxicity: 0.6380
+Found message: i can nuke tho entire world with a stone hoe
+└--> True Toxicity: 0    Predicted Toxicity: 0.6600
+Found message: i was born with a dick in my brain, yeah fucked in the head.
+└--> True Toxicity: 0    Predicted Toxicity: 0.3420
+Found message: little pussy
+└--> True Toxicity: 0    Predicted Toxicity: 1.0360
+Found message: dude fuck you
+└--> True Toxicity: 0    Predicted Toxicity: 0.9800
+Found message: fucking hell
+└--> True Toxicity: 0    Predicted Toxicity: 1.6940
+Found message: ok im still not going to stfu
+└--> True Toxicity: 0    Predicted Toxicity: 0.4320
+Found message: we dont have to hear your annoying ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3600
+Found message: then whyd you join dumbass
+└--> True Toxicity: 1.4  Predicted Toxicity: 0.3780
+Found message: fuck its the grammar dude
+└--> True Toxicity: 0    Predicted Toxicity: 0.4000
+Found message: i dont have any crystals stfu dream kid
+└--> True Toxicity: 0    Predicted Toxicity: 0.4320
+Found message: if we want a photo and shit we might get that in
+└--> True Toxicity: 0    Predicted Toxicity: 0.6840
+Found message: ily no homo
+└--> True Toxicity: 2.2  Predicted Toxicity: 2.2000
+Found message: oh fuck i had netherite on
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.4600
+Found message: we are gonna fucking kill him
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.6160
+Found message: use lickmaballs client its expensive as fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.4000
+Found message: YOU WANT FUCK WITH ME
+└--> True Toxicity: 0    Predicted Toxicity: 0.5600
+Found message: go play some skyblock dipshit
+└--> True Toxicity: 0    Predicted Toxicity: 0.8680
+Found message: I'M A FUCKING GOD WITH THIS SHIT
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.3080
+Found message: meteor is so shitty
+└--> True Toxicity: 0    Predicted Toxicity: 0.7000
+Found message: the fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.3281
+Found message: shit i forgot where aralon 1 is
+└--> True Toxicity: 0    Predicted Toxicity: 0.3960
+Found message: he gave it to his friend you dumb ass
+└--> True Toxicity: 0    Predicted Toxicity: 0.3900
+Found message: fuk
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: fvck tard
+└--> True Toxicity: 0    Predicted Toxicity: 0.9903
+Found message: fuck trees
+└--> True Toxicity: 0    Predicted Toxicity: 1.1400
+Found message: holy shit is that the trevis scoot patty???!!!
+└--> True Toxicity: 0    Predicted Toxicity: 0.4377
+Found message: why is this so fucked -.-
+└--> True Toxicity: 0    Predicted Toxicity: 0.7380
+Found message: plz can someone come to -0 69 474
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.6400
+Found message: ShardDawn suck my dick now plaese :( :( :(
+└--> True Toxicity: 1.0  Predicted Toxicity: 0.9500
+Found message: how the fuck dude
+└--> True Toxicity: 0    Predicted Toxicity: 0.9000
+Found message: mother fucker
+└--> True Toxicity: 0    Predicted Toxicity: 0.5548
+Found message: fuck off Ima switch back to another one
+└--> True Toxicity: 0    Predicted Toxicity: 0.3800
+Found message: find me pussy
+└--> True Toxicity: 0    Predicted Toxicity: 0.3080
+Found message: fuck lost my netherite armour
+└--> True Toxicity: 0    Predicted Toxicity: 0.5000
+Found message: i want to kill him cuz hes a lil shit
+└--> True Toxicity: 1.2  Predicted Toxicity: 0.6600
+Found message: jesus fuck
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.9163
+Found message: fucking asshol
+└--> True Toxicity: 0    Predicted Toxicity: 0.6746
+Found message: UR NOT GETTING SHIT
+└--> True Toxicity: 0    Predicted Toxicity: 0.6180
+Found message: How the fuck would I know
+└--> True Toxicity: 0    Predicted Toxicity: 0.3800
+Found message: tthen who the fuck was in the highway base and killed me
+└--> True Toxicity: 0    Predicted Toxicity: 0.6800
+Found message: shitty
+└--> True Toxicity: 0    Predicted Toxicity: 0.6900
+Found message: retard
+└--> True Toxicity: 0    Predicted Toxicity: 0.6847
+Found message: u scared the fucking shit out of me
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.5060
+Found message: im old as fuck
+└--> True Toxicity: 0    Predicted Toxicity: 0.9400
+Found message: i was saying dont fuck with me
+└--> True Toxicity: 0    Predicted Toxicity: 0.6200
+Found message: fuck this
+└--> True Toxicity: 0    Predicted Toxicity: 0.6235
+Found message: FUCK OFF DUDE
+└--> True Toxicity: 0    Predicted Toxicity: 0.9103
+Found message: who the fuck killed me
+└--> True Toxicity: 0    Predicted Toxicity: 1.1400
+Found message: fuck off pluto
+└--> True Toxicity: 2.0  Predicted Toxicity: 0.5369
+Found message: fuk
+└--> True Toxicity: 0    Predicted Toxicity: 0.6318
+Found message: I KILLED THE STUPID FUCKING GOLEM
+└--> True Toxicity: 2.2  Predicted Toxicity: 0.8837
+Found message: that game is dead as fuck
+└--> True Toxicity: 0    Predicted Toxicity: 1.2600
+Found message: you can dumbass
+└--> True Toxicity: 0    Predicted Toxicity: 0.6300

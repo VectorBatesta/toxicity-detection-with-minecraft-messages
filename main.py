@@ -7,9 +7,17 @@ import os
 
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error, r2_score
 
+from sklearn.linear_model import Ridge
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.neighbors import KNeighborsRegressor
+#NaiveBayes
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 """
 [
@@ -58,7 +66,7 @@ if __name__ == "__main__":
 
 
     # quant_total_mensagens = len(mensagens_json)
-    quant_total_mensagens = 1000000 #1 milhao
+    quant_total_mensagens = 500000 #500 mil* - 1 milhao tava demorano mt
 
     quant_treinamento = int((quant_total_mensagens/100) * 70)  # = 70%
     quant_teste = int((quant_total_mensagens/100) * 30)        # = 30%
@@ -157,25 +165,72 @@ if __name__ == "__main__":
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
 
-    # Train a regression model
-    model = Ridge()  #ridge utilizado
-    model.fit(X_train_tfidf, y_train)
 
-    # Make predictions on the test set
-    y_pred = model.predict(X_test_tfidf)
 
-    # Evaluate the model
-    print(f"\nMean Squared Error: {mean_squared_error(y_test, y_pred)}")
-    print(f"R^2 Score: {r2_score(y_test, y_pred)}")
 
-    # Print all messages and their predicted toxicity values
-    with open("out_mensagens_toxicas-ai.txt", "w+") as arq:
-        for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
-            if predicted_toxicity > 0.3:
-                arq.write(f"Found message: {content}\n└--> True Toxicity: {true_toxicity:<4} Predicted Toxicity: {predicted_toxicity:.4f}\n")
 
-    # Example: Predicting the toxicity of new messages
-    # new_messages = ["Example message 1", "Example message 2"]
-    # new_messages_tfidf = vectorizer.transform(new_messages)
-    # predicted_toxicities = model.predict(new_messages_tfidf)
-    # print(predicted_toxicities)
+
+
+##################################################################################################
+# todos os modelos de mantovs
+##################################################################################################
+
+    def evaluate_model(model, nome_modelo, X_train_dense = None, X_test_dense = None):
+        if X_train_dense is not None and X_test_dense is not None:
+            X_train_data = X_train_dense
+            X_test_data = X_test_dense
+        else:
+            X_train_data = X_train_tfidf
+            X_test_data = X_test_tfidf
+        
+        #treina o modelo
+        model.fit(X_train_data, y_train)
+
+        #faz a previsao
+        y_pred = model.predict(X_test_data)
+
+        #avaliar o modelo
+        mse = mean_squared_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
+        print(f"\n{nome_modelo} - Mean Squared Error: {mse}")
+        print(f"{nome_modelo} - R^2 Score: {r2}")
+
+        #printa todos os valores toxicos acima de 0.3 em cada arquivo
+        with open(f"out_modelos/out_mensagens_toxicas-{nome_modelo}.txt", "w+") as arq:
+            for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
+                if predicted_toxicity > 0.3:
+                    arq.write(f"Found message: {content}\n└--> True Toxicity: {true_toxicity:<4} Predicted Toxicity: {predicted_toxicity:.4f}\n")
+
+
+    #todos os modelos
+    models = [
+        # (Ridge(), "Ridge"),
+        # (SVR(), "SVR"),
+        # (RandomForestRegressor(), "RandomForest"),
+        # (DecisionTreeRegressor(), "DecisionTree"),
+        ####(GaussianProcessRegressor(), "GaussianProcess"),
+        (KNeighborsRegressor(), "KNN")
+    ]
+
+    for model, name in models:
+        # if name == "GaussianProcess":
+        #     X_train_dense = X_train_tfidf.toarray()
+        #     X_test_dense = X_test_tfidf.toarray()
+        #     evaluate_model(model, name, X_train_dense, X_test_dense)
+        # else:
+            evaluate_model(model, name)
+
+    # Ridge - Mean Squared Error:           0.006484928537925116
+    # Ridge - R^2 Score:                    0.1173933567835157
+
+    # SVR - Mean Squared Error:             0.00952025890704332
+    # SVR - R^2 Score:                     -0.2957187897070963
+
+    # RandomForest - Mean Squared Error:    0.006890170755238344
+    # RandomForest - R^2 Score:             0.06223939926174615
+
+    # DecisionTree - Mean Squared Error:    0.008575732061624661
+    # DecisionTree - R^2 Score:            -0.16716753989956223
+
+    # KNN - Mean Squared Error:             0.007154400000000001
+    # KNN - R^2 Score:                      0.02627747841792305
