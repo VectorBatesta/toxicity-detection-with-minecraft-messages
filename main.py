@@ -204,10 +204,10 @@ if __name__ == "__main__":
 
     #todos os modelos
     models = [
-        # (Ridge(), "Ridge"),
-        # (SVR(), "SVR"),
-        # (RandomForestRegressor(), "RandomForest"),
-        # (DecisionTreeRegressor(), "DecisionTree"),
+        (Ridge(), "Ridge"),
+        (SVR(), "SVR"),
+        (RandomForestRegressor(), "RandomForest"),
+        (DecisionTreeRegressor(), "DecisionTree"),
         ####(GaussianProcessRegressor(), "GaussianProcess"),
         (KNeighborsRegressor(), "KNN")
     ]
