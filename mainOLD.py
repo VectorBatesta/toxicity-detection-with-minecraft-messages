@@ -19,13 +19,6 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-#dnn
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-
-
 """
 [
     {
@@ -179,106 +172,65 @@ if __name__ == "__main__":
 
 
 ##################################################################################################
-# todos os modelos de mantovs [nao utilizado]
+# todos os modelos de mantovs
 ##################################################################################################
 
-    # def evaluate_model(model, nome_modelo, X_train_dense = None, X_test_dense = None):
-    #     if X_train_dense is not None and X_test_dense is not None:
-    #         X_train_data = X_train_dense
-    #         X_test_data = X_test_dense
-    #     else:
-    #         X_train_data = X_train_tfidf
-    #         X_test_data = X_test_tfidf
+    def evaluate_model(model, nome_modelo, X_train_dense = None, X_test_dense = None):
+        if X_train_dense is not None and X_test_dense is not None:
+            X_train_data = X_train_dense
+            X_test_data = X_test_dense
+        else:
+            X_train_data = X_train_tfidf
+            X_test_data = X_test_tfidf
         
-    #     #treina o modelo
-    #     model.fit(X_train_data, y_train)
+        #treina o modelo
+        model.fit(X_train_data, y_train)
 
-    #     #faz a previsao
-    #     y_pred = model.predict(X_test_data)
+        #faz a previsao
+        y_pred = model.predict(X_test_data)
 
-    #     #avaliar o modelo
-    #     mse = mean_squared_error(y_test, y_pred)
-    #     r2 = r2_score(y_test, y_pred)
-    #     print(f"\n{nome_modelo} - Mean Squared Error: {mse}")
-    #     print(f"{nome_modelo} - R^2 Score: {r2}")
+        #avaliar o modelo
+        mse = mean_squared_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
+        print(f"\n{nome_modelo} - Mean Squared Error: {mse}")
+        print(f"{nome_modelo} - R^2 Score: {r2}")
 
-    #     #printa todos os valores toxicos acima de 0.3 em cada arquivo
-    #     with open(f"out_modelos/out_mensagens_toxicas-{nome_modelo}.txt", "w+") as arq:
-    #         for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
-    #             if predicted_toxicity > 0.3:
-    #                 arq.write(f"Found message: {content}\n└--> True Toxicity: {true_toxicity:<4} Predicted Toxicity: {predicted_toxicity:.4f}\n")
-
-
-    # #todos os modelos
-    # models = [
-    #     (Ridge(), "Ridge"),
-    #     (SVR(), "SVR"),
-    #     (RandomForestRegressor(), "RandomForest"),
-    #     (DecisionTreeRegressor(), "DecisionTree"),
-    #     ####(GaussianProcessRegressor(), "GaussianProcess"),
-    #     (KNeighborsRegressor(), "KNN")
-    # ]
-
-    # for model, name in models:
-    #     # if name == "GaussianProcess":
-    #     #     X_train_dense = X_train_tfidf.toarray()
-    #     #     X_test_dense = X_test_tfidf.toarray()
-    #     #     evaluate_model(model, name, X_train_dense, X_test_dense)
-    #     # else:
-    #         evaluate_model(model, name)
-
-    # # Ridge - Mean Squared Error:           0.006484928537925116
-    # # Ridge - R^2 Score:                    0.1173933567835157
-
-    # # SVR - Mean Squared Error:             0.00952025890704332
-    # # SVR - R^2 Score:                     -0.2957187897070963
-
-    # # RandomForest - Mean Squared Error:    0.006890170755238344
-    # # RandomForest - R^2 Score:             0.06223939926174615
-
-    # # DecisionTree - Mean Squared Error:    0.008575732061624661
-    # # DecisionTree - R^2 Score:            -0.16716753989956223
-
-    # # KNN - Mean Squared Error:             0.007154400000000001
-    # # KNN - R^2 Score:                      0.02627747841792305
+        #printa todos os valores toxicos acima de 0.3 em cada arquivo
+        with open(f"out_modelos/out_mensagens_toxicas-{nome_modelo}.txt", "w+") as arq:
+            for content, true_toxicity, predicted_toxicity in zip(X_test, y_test, y_pred):
+                if predicted_toxicity > 0.3:
+                    arq.write(f"Found message: {content}\n└--> True Toxicity: {true_toxicity:<4} Predicted Toxicity: {predicted_toxicity:.4f}\n")
 
 
+    #todos os modelos
+    models = [
+        (Ridge(), "Ridge"),
+        (SVR(), "SVR"),
+        (RandomForestRegressor(), "RandomForest"),
+        (DecisionTreeRegressor(), "DecisionTree"),
+        ####(GaussianProcessRegressor(), "GaussianProcess"),
+        (KNeighborsRegressor(), "KNN")
+    ]
 
+    for model, name in models:
+        # if name == "GaussianProcess":
+        #     X_train_dense = X_train_tfidf.toarray()
+        #     X_test_dense = X_test_tfidf.toarray()
+        #     evaluate_model(model, name, X_train_dense, X_test_dense)
+        # else:
+            evaluate_model(model, name)
 
+    # Ridge - Mean Squared Error:           0.006484928537925116
+    # Ridge - R^2 Score:                    0.1173933567835157
 
+    # SVR - Mean Squared Error:             0.00952025890704332
+    # SVR - R^2 Score:                     -0.2957187897070963
 
+    # RandomForest - Mean Squared Error:    0.006890170755238344
+    # RandomForest - R^2 Score:             0.06223939926174615
 
+    # DecisionTree - Mean Squared Error:    0.008575732061624661
+    # DecisionTree - R^2 Score:            -0.16716753989956223
 
-##################################################################################################
-# DNN
-##################################################################################################
-
-    # Convert to dense arrays if they are sparse
-    X_train_dense = X_train_tfidf.toarray()
-    X_test_dense = X_test_tfidf.toarray()
-
-    # Convert to tensors
-    X_train_tensor = tf.convert_to_tensor(X_train_dense, dtype=tf.float32)
-    X_test_tensor = tf.convert_to_tensor(X_test_dense, dtype=tf.float32)
-    y_train_tensor = tf.convert_to_tensor(y_train, dtype=tf.float32)
-    y_test_tensor = tf.convert_to_tensor(y_test, dtype=tf.float32)
-
-
-    # Create the model
-    model = Sequential([
-        Dense(128, activation='relu', input_shape=(X_train_tensor.shape[1],)),
-        Dropout(0.2),
-        Dense(64, activation='relu'),
-        Dropout(0.2),
-        Dense(1)  # Output layer for regression
-    ])
-
-    # Compile the model
-    model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error', metrics=['mean_squared_error'])
-
-    # Train the model
-    history = model.fit(X_train_tensor, y_train_tensor, epochs=50, batch_size=32, validation_split=0.2)
-
-    # Evaluate the model
-    loss, mse = model.evaluate(X_test_tensor, y_test_tensor)
-    print(f"Mean Squared Error: {mse}")
+    # KNN - Mean Squared Error:             0.007154400000000001
+    # KNN - R^2 Score:                      0.02627747841792305
