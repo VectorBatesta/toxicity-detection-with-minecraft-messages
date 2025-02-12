@@ -5,14 +5,19 @@ import numpy as np
 import pandas as pd
 import random
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics import mean_squared_error, r2_score
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Input
+from tensorflow.keras.layers import Dense, Dropout, Embedding, LSTM, Bidirectional, Conv1D, MaxPooling1D
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.regularizers import l2
 
-# Set seeds for reproducibility
+import matplotlib
+matplotlib.use('Agg')
+
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = '/usr/lib/x86_64-linux-gnu/qt5/plugins'
+
 def set_seeds(seed=42):
     random.seed(seed)
     np.random.seed(seed)
@@ -21,58 +26,39 @@ def set_seeds(seed=42):
 if __name__ == "__main__":
     set_seeds()
 
-    # Disable GPU
     os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
-    arq_mensagens = open("clean.json", "r", encoding="utf8")
+    with open("clean.json", "r", encoding="utf8") as f:
+        mensagens_json = json.load(f)
 
-    mensagenstxt = arq_mensagens.read()
-    mensagens_json = json.loads(mensagenstxt)
+    with open("profanity_en.csv", "r", encoding="utf8") as f:
+        profanity_list = list(csv.DictReader(f))
+    for termo in profanity_list:
+        termo['severity_rating'] = float(termo['severity_rating'])
 
-    arq_profanity = open("profanity_en.csv", "r", encoding="utf8")
-    profanity_dicts = csv.DictReader(arq_profanity)
-    profanity_list = list(profanity_dicts)
+    quant_total_mensagens = 1000
+    quant_treinamento = int(quant_total_mensagens * 0.7)
+    quant_teste = int(quant_total_mensagens * 0.3)
 
-    for termo_profanity in profanity_list:
-        termo_profanity['severity_rating'] = float(termo_profanity['severity_rating'])
-
-    quant_total_mensagens = 1000  # Reduced dataset size for faster runtime
-    quant_treinamento = int((quant_total_mensagens / 100) * 70)  # = 70%
-    quant_teste = int((quant_total_mensagens / 100) * 30)  # = 30%
-
-    for _index, msg in enumerate(mensagens_json[0:quant_treinamento]):
-        msg['tokens'] = msg['content'].lower().split(" ")
+    for msg in mensagens_json[:quant_treinamento]:
+        msg['tokens'] = msg['content'].lower().split()
         msg['all_toxic_occurrences'] = []
         msg['toxic_tuple'] = (None, 0)
 
         for tok in msg['tokens']:
-            for termo_profanity in profanity_list:
-                if tok.lower() == termo_profanity['text'].lower():
-                    if len(msg['all_toxic_occurrences']) == 0:
-                        print(f"\t[FOUND!] word: {tok:<20} toxicity rating: {termo_profanity['severity_rating']:<3} index: {_index} \nuser: {msg['username']:<20} message: {msg['content']}")
-                    else:
-                        print(f"  [ALSO!] word: {tok:<20} toxicity rating: {termo_profanity['severity_rating']} index: {_index}\nuser: {msg['username']:<20} message: {msg['content']}")
+            for termo in profanity_list:
+                if tok.lower() == termo['text'].lower():
+                    msg['all_toxic_occurrences'].append((termo['text'], termo['severity_rating']))
 
-                    msg['all_toxic_occurrences'].append((termo_profanity['text'], termo_profanity['severity_rating']))
+        if msg['all_toxic_occurrences']:
+            msg['toxic_tuple'] = max(msg['all_toxic_occurrences'], key=lambda x: x[1])
 
-                    print("")
+    for msg in mensagens_json:
+        if 'toxic_tuple' not in msg:
+            msg['toxic_tuple'] = (None, 0)
 
-        maiorFatorToxicidade = 0
-        for tuple in msg['all_toxic_occurrences']:
-            if maiorFatorToxicidade < tuple[1]:  # [1] = severity_rating
-                maiorTermoToxico = tuple[0]  # [0] = text
-                maiorFatorToxicidade = tuple[1]
-
-        if maiorFatorToxicidade > 0:
-            msg['toxic_tuple'] = (maiorTermoToxico, maiorFatorToxicidade)
-
-    with open("out_mensagens_toxicas-original.txt", "w+") as arq:
-        for msg in mensagens_json[0:quant_treinamento]:
-            if msg['toxic_tuple'] != None:
-                arq.write(f"message by {msg['username']:<20}\thas {msg['toxic_tuple'][1]} toxicity, because he said:\t\t {msg['toxic_tuple'][0]}\n")
-
-    contents = [mensagem['content'] for mensagem in mensagens_json]
-    toxicities = [mensagem['toxic_tuple'][1] if 'toxic_tuple' in mensagem and mensagem['toxic_tuple'] is not None else 0 for mensagem in mensagens_json]
+    contents = [msg['content'] for msg in mensagens_json]
+    toxicities = [msg['toxic_tuple'][1] if msg['toxic_tuple'] else 0 for msg in mensagens_json]
 
     new_terms_df = pd.read_csv('toxicity_en-newterms.csv')
     new_contents = new_terms_df['text'].tolist()
@@ -81,38 +67,50 @@ if __name__ == "__main__":
     combined_contents = contents + new_contents
     combined_toxicities = toxicities + new_toxicities
 
+    print(f"Total dataset size: {len(combined_contents)} samples")
+
+    vocab_size = 10000
+    max_length = 50
+
+    tokenizer = Tokenizer(num_words=vocab_size, oov_token="<OOV>")
+    tokenizer.fit_on_texts(combined_contents)
+
+    X_sequences = tokenizer.texts_to_sequences(combined_contents)
+    X_padded = pad_sequences(X_sequences, maxlen=max_length, padding='post', truncating='post')
+
+    small_sample_size = int(len(X_padded) * 0.1)
     X_train, X_test, y_train, y_test = train_test_split(
-        combined_contents,
-        combined_toxicities,
-        train_size=quant_treinamento,  # 70%
-        test_size=quant_teste,  # 30%
-        random_state=42
+        X_padded[:small_sample_size], combined_toxicities[:small_sample_size], 
+        train_size=0.8, test_size=0.2, random_state=42
     )
 
-    vectorizer = TfidfVectorizer(max_features=10000)
-    X_train_tfidf = vectorizer.fit_transform(X_train)
-    X_test_tfidf = vectorizer.transform(X_test)
+    train_set = set(tuple(row) for row in X_train)
+    test_set = set(tuple(row) for row in X_test)
+    overlap = train_set.intersection(test_set)
+    print(f"Duplicate samples in train/test split: {len(overlap)}")
 
-    X_train_dense = X_train_tfidf.toarray()
-    X_test_dense = X_test_tfidf.toarray()
-
-    X_train_tensor = tf.convert_to_tensor(X_train_dense, dtype=tf.float32)
-    X_test_tensor = tf.convert_to_tensor(X_test_dense, dtype=tf.float32)
+    X_train_tensor = tf.convert_to_tensor(X_train, dtype=tf.float32)
+    X_test_tensor = tf.convert_to_tensor(X_test, dtype=tf.float32)
     y_train_tensor = tf.convert_to_tensor(y_train, dtype=tf.float32)
     y_test_tensor = tf.convert_to_tensor(y_test, dtype=tf.float32)
 
     model = Sequential([
-        Input(shape=(X_train_tensor.shape[1],)),
-        Dense(128, activation='relu'),
-        Dropout(0.2),
-        Dense(64, activation='relu'),
-        Dropout(0.2),
-        Dense(1)  # Output layer for regression
+        Embedding(input_dim=vocab_size, output_dim=128, input_length=max_length),
+        Conv1D(filters=64, kernel_size=3, activation='relu'),
+        MaxPooling1D(pool_size=2),
+        Bidirectional(LSTM(64, return_sequences=True)),
+        Dropout(0.4),
+        Bidirectional(LSTM(32)),
+        Dense(64, activation='relu', kernel_regularizer=l2(0.001)),
+        Dropout(0.3),
+        Dense(1, activation='sigmoid')
     ])
 
-    model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error', metrics=['mean_squared_error'])
+    model.compile(optimizer=Adam(learning_rate=0.0005), loss='binary_crossentropy', metrics=['accuracy'])
 
-    history = model.fit(X_train_tensor, y_train_tensor, epochs=5, batch_size=32, validation_split=0.2)  # Reduced epochs for faster runtime
+    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
 
-    loss, mse = model.evaluate(X_test_tensor, y_test_tensor)
-    print(f"Mean Squared Error: {mse}")
+    history = model.fit(X_train_tensor, y_train_tensor, epochs=10, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
+
+    loss, accuracy = model.evaluate(X_test_tensor, y_test_tensor)
+    print(f"Test Accuracy: {accuracy * 100:.2f}%")
