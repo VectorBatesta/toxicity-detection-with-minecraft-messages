@@ -18,7 +18,41 @@ matplotlib.use('Agg')
 
 os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = '/usr/lib/x86_64-linux-gnu/qt5/plugins'
 
-def set_seeds(seed=42):
+
+#########################
+##### Configuration #####
+#########################
+# SEED = Seed for reproducibility
+# QUANT_TOTAL_MENSAGENS = Increasing this will make training take longer but can improve model performance
+# TRAIN_SIZE_RATIO = Higher ratio means more data for training, potentially better results but longer training time
+# TEST_SIZE_RATIO = Lower ratio means less data for testing, potentially less reliable evaluation
+# VOCAB_SIZE = Quantity of words to consider in the vocabulary
+# MAX_LENGTH = Quantity of words to consider in each message
+# EPOCHS = More epochs can improve model performance but increases training time
+# BATCH_SIZE = Larger batch size can speed up training but may require more memory and can affect model convergence
+# LEARNING_RATE = Higher learning rate can speed up training but may cause the model to converge too quickly to a suboptimal solution
+# PATIENCE = Higher patience allows the model to train longer before stopping, potentially improving performance but increasing training time
+SEED = 42
+QUANT_TOTAL_MENSAGENS = 1000
+
+TRAIN_SIZE_RATIO = 0.7
+TEST_SIZE_RATIO = 1 - TRAIN_SIZE_RATIO
+
+VOCAB_SIZE = 10000
+MAX_LENGTH = 50
+
+EPOCHS = 10
+BATCH_SIZE = 32
+
+LEARNING_RATE = 0.0005
+PATIENCE = 3
+#########################
+#########################
+#########################
+
+
+
+def set_seeds(seed=SEED):
     random.seed(seed)
     np.random.seed(seed)
     tf.random.set_seed(seed)
@@ -36,9 +70,8 @@ if __name__ == "__main__":
     for termo in profanity_list:
         termo['severity_rating'] = float(termo['severity_rating'])
 
-    quant_total_mensagens = 1000
-    quant_treinamento = int(quant_total_mensagens * 0.7)
-    quant_teste = int(quant_total_mensagens * 0.3)
+    quant_treinamento = int(QUANT_TOTAL_MENSAGENS * TRAIN_SIZE_RATIO)
+    quant_teste = int(QUANT_TOTAL_MENSAGENS * TEST_SIZE_RATIO)
 
     for msg in mensagens_json[:quant_treinamento]:
         msg['tokens'] = msg['content'].lower().split()
@@ -69,19 +102,16 @@ if __name__ == "__main__":
 
     print(f"Total dataset size: {len(combined_contents)} samples")
 
-    vocab_size = 10000
-    max_length = 50
-
-    tokenizer = Tokenizer(num_words=vocab_size, oov_token="<OOV>")
+    tokenizer = Tokenizer(num_words=VOCAB_SIZE, oov_token="<OOV>")
     tokenizer.fit_on_texts(combined_contents)
 
     X_sequences = tokenizer.texts_to_sequences(combined_contents)
-    X_padded = pad_sequences(X_sequences, maxlen=max_length, padding='post', truncating='post')
+    X_padded = pad_sequences(X_sequences, maxlen=MAX_LENGTH, padding='post', truncating='post')
 
     small_sample_size = int(len(X_padded) * 0.1)
     X_train, X_test, y_train, y_test = train_test_split(
         X_padded[:small_sample_size], combined_toxicities[:small_sample_size], 
-        train_size=0.8, test_size=0.2, random_state=42
+        train_size=0.8, test_size=0.2, random_state=SEED
     )
 
     train_set = set(tuple(row) for row in X_train)
@@ -95,7 +125,7 @@ if __name__ == "__main__":
     y_test_tensor = tf.convert_to_tensor(y_test, dtype=tf.float32)
 
     model = Sequential([
-        Embedding(input_dim=vocab_size, output_dim=128, input_length=max_length),
+        Embedding(input_dim=VOCAB_SIZE, output_dim=128, input_length=MAX_LENGTH),
         Conv1D(filters=64, kernel_size=3, activation='relu'),
         MaxPooling1D(pool_size=2),
         Bidirectional(LSTM(64, return_sequences=True)),
@@ -106,11 +136,29 @@ if __name__ == "__main__":
         Dense(1, activation='sigmoid')
     ])
 
-    model.compile(optimizer=Adam(learning_rate=0.0005), loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=Adam(learning_rate=LEARNING_RATE), loss='binary_crossentropy', metrics=['accuracy'])
 
-    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
+    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=PATIENCE, restore_best_weights=True)
 
-    history = model.fit(X_train_tensor, y_train_tensor, epochs=10, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
+    history = model.fit(X_train_tensor, y_train_tensor, epochs=EPOCHS, batch_size=BATCH_SIZE, validation_split=0.2, callbacks=[early_stopping])
+
+    # Print training progress
+    for epoch in range(len(history.history['loss'])):
+        print(f"Epoch {epoch + 1}/{len(history.history['loss'])}")
+        print(f" - loss: {history.history['loss'][epoch]:.4f} - accuracy: {history.history['accuracy'][epoch]:.4f}")
+        print(f" - val_loss: {history.history['val_loss'][epoch]:.4f} - val_accuracy: {history.history['val_accuracy'][epoch]:.4f}")
 
     loss, accuracy = model.evaluate(X_test_tensor, y_test_tensor)
+    print(f"Test Loss: {loss:.4f}")
     print(f"Test Accuracy: {accuracy * 100:.2f}%")
+
+    # Predict the toxicity of the test messages
+    y_pred = model.predict(X_test_tensor)
+    y_pred = (y_pred > 0.5).astype(int).flatten()
+
+    # Identify and print the messages that the AI thinks are toxic
+    toxic_messages = [combined_contents[i] for i in range(len(y_test)) if y_pred[i] == 1]
+
+    with open("out_foundmessages.txt", "w") as f:
+        for message in toxic_messages:
+            f.write(f"{message}\n")
