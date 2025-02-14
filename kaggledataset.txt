@@ -1,1 +1,2 @@
 https://www.kaggle.com/datasets/declipsonator/minecraft-server-chat
+install on same folder as main.py
