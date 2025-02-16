@@ -33,7 +33,7 @@ os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = '/usr/lib/x86_64-linux-gnu/qt5/plugi
 # LEARNING_RATE = Higher learning rate can speed up training but may cause the model to converge too quickly to a suboptimal solution
 # PATIENCE = Higher patience allows the model to train longer before stopping, potentially improving performance but increasing training time
 SEED = 42
-QUANT_TOTAL_MENSAGENS = 3000
+QUANT_TOTAL_MENSAGENS = 300000
 
 TRAIN_SIZE_RATIO = 0.7
 TEST_SIZE_RATIO = 1 - TRAIN_SIZE_RATIO
