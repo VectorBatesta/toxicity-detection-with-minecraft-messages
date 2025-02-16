@@ -33,7 +33,7 @@ os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = '/usr/lib/x86_64-linux-gnu/qt5/plugi
 # LEARNING_RATE = Higher learning rate can speed up training but may cause the model to converge too quickly to a suboptimal solution
 # PATIENCE = Higher patience allows the model to train longer before stopping, potentially improving performance but increasing training time
 SEED = 42
-QUANT_TOTAL_MENSAGENS = 300000
+QUANT_TOTAL_MENSAGENS = 3000
 
 TRAIN_SIZE_RATIO = 0.7
 TEST_SIZE_RATIO = 1 - TRAIN_SIZE_RATIO
@@ -69,10 +69,10 @@ if __name__ == "__main__":
         mensagens_json = json.load(f)
 
     #carrega a lista de termos toxicos
-    with open("profanity_en.csv", "r", encoding="utf8") as f:
-        profanity_list = list(csv.DictReader(f))
-    for termo in profanity_list:
-        termo['severity_rating'] = float(termo['severity_rating'])
+    # with open("profanity_en.csv", "r", encoding="utf8") as f:
+    #     profanity_list = list(csv.DictReader(f))
+    # for termo in profanity_list:
+    #     termo['severity_rating'] = float(termo['severity_rating'])
 
     #separa as mensagens em treinamento e teste
     quant_treinamento = int(QUANT_TOTAL_MENSAGENS * TRAIN_SIZE_RATIO)
@@ -84,10 +84,10 @@ if __name__ == "__main__":
         msg['all_toxic_occurrences'] = []
         msg['toxic_tuple'] = (None, 0)
 
-        for tok in msg['tokens']:
-            for termo in profanity_list:
-                if tok.lower() == termo['text'].lower():
-                    msg['all_toxic_occurrences'].append((termo['text'], termo['severity_rating']))
+        # for tok in msg['tokens']:
+        #     for termo in profanity_list:
+        #         if tok.lower() == termo['text'].lower():
+        #             msg['all_toxic_occurrences'].append((termo['text'], termo['severity_rating']))
 
         if msg['all_toxic_occurrences']:
             msg['toxic_tuple'] = max(msg['all_toxic_occurrences'], key=lambda x: x[1])

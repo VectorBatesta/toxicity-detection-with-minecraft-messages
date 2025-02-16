@@ -1,0 +1,9 @@
+Number of combined contents: 2665797
+Number of combined toxicities: 2665797
+Sample tokenized and padded sequence: [ 217   52    7 1699 1803   39   16   55    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+    0    0    0    0    0    0    0    0]
+Training data shape: (213263, 50)
+Validation data shape: (53316, 50)
+Number of toxic messages found: 0
