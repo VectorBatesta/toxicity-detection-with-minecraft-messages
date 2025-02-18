@@ -69,10 +69,10 @@ if __name__ == "__main__":
         mensagens_json = json.load(f)
 
     #carrega a lista de termos toxicos
-    # with open("profanity_en.csv", "r", encoding="utf8") as f:
-    #     profanity_list = list(csv.DictReader(f))
-    # for termo in profanity_list:
-    #     termo['severity_rating'] = float(termo['severity_rating'])
+    with open("profanity_en.csv", "r", encoding="utf8") as f:
+        profanity_list = list(csv.DictReader(f))
+    for termo in profanity_list:
+        termo['severity_rating'] = float(termo['severity_rating'])
 
     #separa as mensagens em treinamento e teste
     quant_treinamento = int(QUANT_TOTAL_MENSAGENS * TRAIN_SIZE_RATIO)
@@ -84,10 +84,10 @@ if __name__ == "__main__":
         msg['all_toxic_occurrences'] = []
         msg['toxic_tuple'] = (None, 0)
 
-        # for tok in msg['tokens']:
-        #     for termo in profanity_list:
-        #         if tok.lower() == termo['text'].lower():
-        #             msg['all_toxic_occurrences'].append((termo['text'], termo['severity_rating']))
+        for tok in msg['tokens']:
+            for termo in profanity_list:
+                if tok.lower() == termo['text'].lower():
+                    msg['all_toxic_occurrences'].append((termo['text'], termo['severity_rating']))
 
         if msg['all_toxic_occurrences']:
             msg['toxic_tuple'] = max(msg['all_toxic_occurrences'], key=lambda x: x[1])
@@ -101,6 +101,12 @@ if __name__ == "__main__":
     contents = [msg['content'] for msg in mensagens_json]
     toxicities = [msg['toxic_tuple'][1] if msg['toxic_tuple'] else 0 for msg in mensagens_json]
 
+
+
+
+    ################
+    # [ CNN start ]#
+    ################
     #carrega o dataset de novos termos (si2)
     new_terms_df = pd.read_csv('toxicity_en-newterms.csv')
     new_contents = new_terms_df['text'].tolist()
@@ -110,7 +116,7 @@ if __name__ == "__main__":
     combined_contents = contents + new_contents
     combined_toxicities = toxicities + new_toxicities
 
-    #vê o tamanho do datset
+    #vê o tamanho do dataset
     print(f"Total dataset size: {len(combined_contents)} samples")
 
     #tokeniza e padroniza as mensagens
@@ -126,7 +132,7 @@ if __name__ == "__main__":
     small_sample_size = int(len(X_padded) * 0.1)
     X_train, X_test, y_train, y_test = train_test_split(
         X_padded[:small_sample_size], combined_toxicities[:small_sample_size], 
-        train_size=0.8, test_size=0.2, random_state=SEED
+        train_size=TRAIN_SIZE_RATIO, test_size=TEST_SIZE_RATIO, random_state=SEED
     )
 
     #checa se existe mensagens duplicadas (pra deixar maius rapido)
